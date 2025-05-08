@@ -21,3 +21,13 @@ puts numbers[100]
 a = [1, 2, [3, 4, 5], 6, 7]
 a.flatten # => [1, 2, 3, 4, 5, 6, 7]
 
+# Arrays can be reduced to a single value
+
+a = [1, 2, 3, 4, 5]
+a.reduce(0) { |sum, n| sum + n } # => 15
+#sum is initially 0, n is the current element
+
+#Mapping
+[ 1, 2 ].map { |i| i * 2 } # => [2, 4]
+
+[ 1, nil, 3, 5 ].map { |i| i.nil? } # => [false, true, false, false]
